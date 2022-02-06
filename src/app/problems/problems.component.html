@@ -1,0 +1,27 @@
+
+<h1>Here you can share your brighests ideas;</h1>
+<h1>or just something you want to see changed.</h1>
+
+<label for="pname">Name your idea: </label>
+<input type="text" id="pname" name="pname">  (Something simple, just a few words)<br><br>
+
+<label class="description_label" for="description_box" >In 100 words or less describe your idea/problem: </label>
+<textarea type="text" id="description" name="description" maxlength="100" rows="3" cols="50">{{description_disp}}</textarea><br><br>
+
+<label for="drop_down_button">Select the best fitting topic: </label>
+<div class="dropdown">
+    <button class="dropbtn">{{dropdown_disp}}</button>
+    <div class="dropdown-content">
+      <a *ngFor="let topic of topics_list; let i = index" [class.selected]="topic === topicSelected" (click)="isSelected(topic)">
+          {{topic}}
+      </a>
+      <a (click)="newTopicSelected()">Add New Topic</a>
+    </div>
+  </div>
+  <div *ngIf="new_Topic_Selected" >
+  <label>Put new topic here: </label>
+  <input name="topic_box" id="topic_box" type="text"><br><br>
+  </div>
+
+  <button style="margin-top:200px"class="confirm_button" type="button" (click)="confirmSelected()">Click me to confirm submission.</button>
+

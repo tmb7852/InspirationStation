@@ -1,0 +1,24 @@
+<h2>Current Ideas.</h2>
+
+<!-- <li *ngFor = "let idea of ideas_list">
+    <span>{{idea.topic}} </span>
+    <button [class.selected]="idea === ideaSelected" type="button" (click)="onSelect(idea)">
+        <span>{{idea.name}}</span>
+    </button>
+</li>
+<div>
+    {{ideaDescription}}
+</div> -->
+<li *ngFor = "let topic of ideaTopics">
+    <button [class.selected]="topic === topicSelected" type="button" (click)="onTopicSelect(topic)">
+        <span>{{topic}}</span>
+    </button>
+</li>
+<ul *ngIf="is_topic_selected">
+    <li *ngFor ="let idea of idea_from_topics">
+        <button class="idea_button" [class.selected]="idea === ideaSelected" type="button" (click)="onSelect(idea)">
+            <span>{{idea.name}}</span>
+        </button>
+    </li>
+    <textarea disabled rows="4" cols="50" size="fixed">{{ideaDescription}}</textarea>
+</ul>

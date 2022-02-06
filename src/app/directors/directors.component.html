@@ -1,0 +1,5 @@
+
+<button type="button" class="ideaButton" (click)="onIdeasSelect()" >I need ideas.</button>
+<button type="button" class="probButton" (click)="onProblemsSelect()">I have ideas.</button>
+<app-ideas *ngIf="ideasClicked"></app-ideas>
+<app-problems *ngIf="problemsClicked"></app-problems>
