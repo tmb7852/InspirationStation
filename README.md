@@ -1,3 +1,7 @@
+# Please Note:
+
+This project is over 3 years old and was made for a hackathon where I worked alone and wanted to learn how to use Angular. I am deciding to leave it as is and not delete as I find it a great reminder of where I started as a developer compared to where I am now. I recognize that it is nothing short of dreadfuly bad but that would be the point...
+
 # AngularInspirationStation
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
